@@ -75,17 +75,25 @@ Query-level cache:
 
 
 many-to-one: 
+```xml
   <many-to-one name="address" column="address"  class="Address" not-null="true"/>
+```
 one-to-one: 
+```xml
   <many-to-one name="address" column="address" unique="true" class="Address" not-null="true"/>
+```
 one-to-many:
+```xml
 	<set name="certificates" cascade="all">
 		 <key column="employee_id"/>
 		 <one-to-many class="Certificate"/>
 	</set>
+```
 many-to-many:
+```xml
       <set name="certificates" cascade="save-update" table="EMP_CERT">
          <key column="employee_id"/>
          <many-to-many column="certificate_id" class="Certificate"/>
       </set>
+```
 
