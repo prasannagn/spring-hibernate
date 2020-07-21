@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+   "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.app.model">
+
+	<class name="Member" table="MEMBER">
+		<id name="id" column="USER_ID">
+			<generator class="assigned" />
+		</id>
+
+		<property name="name" column="USER_NAME" />
+	</class>
+
+</hibernate-mapping> 
